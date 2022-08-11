@@ -14,6 +14,11 @@
     <div class="right-menu">
       <el-dropdown class="avatar-container" trigger="click">
         <div class="avatar-wrapper">
+          <!-- 放置切换多语言 -->
+          <lang class="right-menu-item" />
+          <!-- 放置全屏插件 -->
+          <theme-picker class="right-menu-item" />
+          <screen-full class="right-menu-item" />
           <img
             v-imgError="defaultImg"
             :src="$store.getters.avatar"
@@ -79,7 +84,9 @@ export default {
   position: relative;
   background-image: -webkit-linear-gradient(left, #3d6df8, #5b8cff);
   box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
-
+  .right-menu-item {
+    vertical-align: middle;
+  }
   .hamburger-container {
     line-height: 46px;
     height: 100%;
